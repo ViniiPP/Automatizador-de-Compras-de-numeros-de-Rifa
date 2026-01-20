@@ -1,0 +1,15 @@
+const buttons = document.querySelectorAll(
+  '#raffle-numbers button.raffle-number-btn:not(.paid):not(.reserved)'
+);
+
+console.log('Botões disponíveis:', buttons.length);
+
+buttons.forEach((btn, i) => {
+  setTimeout(() => {
+    btn.scrollIntoView({ block: 'center' });
+
+    btn.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }));
+    btn.dispatchEvent(new MouseEvent('mouseup', { bubbles: true }));
+    btn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+  }, i * 50);
+});
