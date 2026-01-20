@@ -31,5 +31,5 @@ buttons.forEach((btn, i) => {
     btn.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }));
     btn.dispatchEvent(new MouseEvent('mouseup', { bubbles: true }));
     btn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
-  }, i * 10);
+  }, i * 50);
 });
